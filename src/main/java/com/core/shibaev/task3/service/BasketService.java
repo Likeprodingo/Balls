@@ -11,7 +11,10 @@ public class BasketService {
     public int blueBallCount(Basket basket)
     {
         int count = 0;
-        ArrayList<Ball> balls = basket.getBalls();
+        ArrayList<Ball> balls = new ArrayList<Ball>();
+        for (int i = 0; i < basket.getBallsNumber(); i++) {
+            balls.add(basket.getBall(i));
+        }
         for (Ball ball: balls)
         {
             if(ball.getColor() == BallColor.BLUE)
@@ -24,7 +27,10 @@ public class BasketService {
     public double calculateBallsWeight(Basket basket)
     {
         double sum = 0;
-        ArrayList<Ball> balls = basket.getBalls();
+        ArrayList<Ball> balls = new ArrayList<Ball>();
+        for (int i = 0; i < basket.getBallsNumber(); i++) {
+            balls.add(basket.getBall(i));
+        }
         for (Ball ball: balls)
         {
            sum+=ball.getWeight();

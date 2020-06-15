@@ -35,8 +35,19 @@ public class Basket {
     public double getCapacity() {
         return capacity;
     }
-
-    public ArrayList<Ball> getBalls() {
-        return balls;
+    public int getBallsNumber()
+    {
+        return balls.size();
+    }
+    public Ball getBall(int index) {
+        Ball ball;
+        try {
+             ball = balls.get(index);
+        }
+        catch (IndexOutOfBoundsException e)
+        {
+            ball = null;
+        }
+        return ball;
     }
 }
