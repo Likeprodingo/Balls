@@ -1,9 +1,34 @@
-package com.core.shibaev.task3.entety;
+package com.core.shibaev.task3.entity;
 
 public class Ball {
     private double weight;
     private BallColor color;
     private double radius;
+
+    public Ball() {
+    }
+
+    public Ball(double weight, BallColor color, double radius) {
+        this.weight = weight;
+        this.color = color;
+        this.radius = radius;
+    }
+
+    public double calculateSize() {
+        return 8 * Math.pow(radius, 3);
+    }
+
+    public double getWeight() {
+        return weight;
+    }
+
+    public BallColor getColor() {
+        return color;
+    }
+
+    public double getRadius() {
+        return radius;
+    }
 
     @Override
     public String toString() {
@@ -14,7 +39,6 @@ public class Ball {
         sb.append('}');
         return sb.toString();
     }
-
 
     @Override
     public boolean equals(Object o) {
@@ -30,33 +54,5 @@ public class Ball {
     public int hashCode() {
         return color != null ? color.hashCode() : 0;
     }
-
-
-    public Ball() {
-    }
-
-    public Ball(double weight, BallColor color, double radius) {
-        this.weight = weight;
-        this.color = color;
-        this.radius = radius;
-    }
-
-    public double calculateSize()
-    {
-        return 8 * Math.pow(radius,3);
-    }
-
-    public double getWeight() {
-        return weight;
-    }
-
-    public BallColor getColor() {
-        return color;
-    }
-
-    public double getRadius() {
-        return radius;
-    }
-
 
 }

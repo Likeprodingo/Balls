@@ -1,6 +1,5 @@
-package com.core.shibaev.task3.entety;
+package com.core.shibaev.task3.entity;
 
-import java.awt.*;
 import java.util.ArrayList;
 
 public class Basket {
@@ -35,19 +34,12 @@ public class Basket {
     public double getCapacity() {
         return capacity;
     }
-    public int getBallsNumber()
-    {
+
+    public int getBallsNumber() {
         return balls.size();
     }
+
     public Ball getBall(int index) {
-        Ball ball;
-        try {
-             ball = balls.get(index);
-        }
-        catch (IndexOutOfBoundsException e)
-        {
-            ball = null;
-        }
-        return ball;
+        return balls.get(index);
     }
 }
