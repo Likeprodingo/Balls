@@ -3,6 +3,8 @@ package com.core.shibaev.task3.service;
 import com.core.shibaev.task3.entity.Ball;
 import com.core.shibaev.task3.entity.BallColor;
 import com.core.shibaev.task3.entity.Basket;
+import com.core.shibaev.task3.exeption.CustomException;
+import com.core.shibaev.task3.validator.BallValidator;
 
 import java.util.ArrayList;
 
@@ -32,22 +34,6 @@ public class BasketService {
             sum += ball.getWeight();
         }
         return sum;
-    }
-
-    public Basket fillUpBasket(Basket basket) {
-        while (basket.addBall(new Ball(Math.random() * 10, BallColor.values()[(int) (Math.random() * 10)], Math.random() * 5))) {
-        }
-        return basket;
-    }
-
-    public Basket hardCodeFillUp(Basket basket) {
-        basket.addBall(new Ball(15, BallColor.BLUE, 1));
-        basket.addBall(new Ball(20, BallColor.BLACK, 3));
-        basket.addBall(new Ball(20, BallColor.BLACK, 2));
-        basket.addBall(new Ball(10, BallColor.BLUE, 1));
-        basket.addBall(new Ball(12, BallColor.YELLOW, 4));
-        basket.addBall(new Ball(13, BallColor.RED, 2));
-        return basket;
     }
 
 }

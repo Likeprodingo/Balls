@@ -14,10 +14,6 @@ public class Ball {
         this.radius = radius;
     }
 
-    public double calculateSize() {
-        return 8 * Math.pow(radius, 3);
-    }
-
     public double getWeight() {
         return weight;
     }
@@ -28,6 +24,10 @@ public class Ball {
 
     public double getRadius() {
         return radius;
+    }
+
+    public double calculateSize() {
+        return 8 * Math.pow(radius, 3);
     }
 
     @Override
@@ -52,7 +52,13 @@ public class Ball {
 
     @Override
     public int hashCode() {
-        return color != null ? color.hashCode() : 0;
+        int result;
+        long temp;
+        temp = Double.doubleToLongBits(weight);
+        result = (int) (temp ^ (temp >>> 32));
+        result = 31 * result + (color != null ? color.hashCode() : 0);
+        temp = Double.doubleToLongBits(radius);
+        result = 31 * result + (int) (temp ^ (temp >>> 32));
+        return result;
     }
-
 }

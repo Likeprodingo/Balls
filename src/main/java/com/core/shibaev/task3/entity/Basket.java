@@ -1,5 +1,7 @@
 package com.core.shibaev.task3.entity;
 
+import com.core.shibaev.task3.validator.BallValidator;
+
 import java.util.ArrayList;
 
 public class Basket {
