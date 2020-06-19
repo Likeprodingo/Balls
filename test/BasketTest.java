@@ -1,10 +1,9 @@
-import com.core.shibaev.task3.creator.BallCreator;
-import com.core.shibaev.task3.entity.Ball;
-import com.core.shibaev.task3.entity.BallColor;
-import com.core.shibaev.task3.entity.Basket;
-import com.core.shibaev.task3.exeption.CustomException;
-import com.core.shibaev.task3.service.BasketService;
-import com.core.shibaev.task3.validator.BallValidator;
+import com.shibaev.task3.creator.BallCreator;
+import com.shibaev.task3.entity.BallColor;
+import com.shibaev.task3.entity.Basket;
+import com.shibaev.task3.exeption.CustomException;
+import com.shibaev.task3.service.BasketService;
+import com.shibaev.task3.validator.BallValidator;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
@@ -29,7 +28,7 @@ public class BasketTest {
     @Test(enabled = true, expectedExceptions = CustomException.class, expectedExceptionsMessageRegExp = "Wrong add", dataProvider = "wrong_data", groups = {"create_group_test"})
     public void creatorFalseTest(double weight, double radius, BallColor ballColor, double capacity) throws CustomException {
         Basket basket = new Basket(capacity);
-        ballCreator.add(weight, ballColor, radius, basket);
+        basketService.add(weight, ballColor, radius, basket);
     }
 
     @DataProvider(name = "false_validator_data")

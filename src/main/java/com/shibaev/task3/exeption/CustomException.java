@@ -1,4 +1,4 @@
-package com.core.shibaev.task3.exeption;
+package com.shibaev.task3.exeption;
 
 public class CustomException extends Exception {
     public CustomException(String message, Throwable cause) {

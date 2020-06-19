@@ -1,6 +1,4 @@
-package com.core.shibaev.task3.entity;
-
-import com.core.shibaev.task3.validator.BallValidator;
+package com.shibaev.task3.entity;
 
 import java.util.ArrayList;
 

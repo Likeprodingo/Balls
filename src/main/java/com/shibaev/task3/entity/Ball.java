@@ -1,4 +1,4 @@
-package com.core.shibaev.task3.entity;
+package com.shibaev.task3.entity;
 
 public class Ball {
     private double weight;
