@@ -6,9 +6,6 @@ public class Basket {
     private double capacity;
     private ArrayList<Ball> balls = new ArrayList<Ball>();
 
-    public Basket() {
-    }
-
     public Basket(double capacity) {
         this.capacity = capacity;
     }
